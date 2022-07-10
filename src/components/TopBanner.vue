@@ -1,52 +1,27 @@
 <template>
     <div class="container">
-      <div class="topBanner">
-         <!-- 左侧位置 -->
-      <div class="location">
-        <a href="javascript:;">
-          <i class="el-icon-location"></i>
-          <span>广东</span>
-        </a>
+      <div class="logo">
+        <img src="../assets/Images/home/logo.png" alt="">
+        <span>网易云音乐</span>
       </div>
-      <!-- 右侧菜单栏 -->
-      <div>
-        <ul>
-          <li><a href="javascript:;">你好，请登录</a></li>
-          <li>
-            <a href="javascript:;">免费注册</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">我的订单</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">我的京东</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">京东会员</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">企业采购</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">客服会员</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">网站导航</a>
-            <span>|</span>
-          </li>
-          <li>
-            <a href="javascript:;">手机京东</a>
-            <span>|</span>
-          </li>
-          <li><a href="javascript:;">网站无障碍</a></li>
-        </ul>
-      </div>
+      <!--  -->
+      <div class="rightList">
+         <div class="bannerList">
+            <div>发现音乐</div>
+            <div>我的音乐</div>
+            <div>关注</div>
+            <div>商城</div>
+            <div>音乐人</div>
+        <div>
+          <span>下载客户端</span>
+          <div class="icon"></div>
+        </div>
+         </div>
+        <div class="Info">
+          <el-input minlength=100 placeholder="音乐/视频/电台" prefix-icon="el-icon-search"></el-input>
+          <div class="create">创作者中心</div>
+          <img src="../assets/Images/home/logo.png" alt="">
+        </div>
       </div>
     </div>
 </template>
@@ -63,47 +38,75 @@ export default {
 </script>
 <style scoped>
 .container {
-  width: 100%;
-  background-color: #e3e4e5;
-  height: 28px;
-  line-height: 30px;
-}
-.topBanner {
+  background-color: #242424;
+  height: 60px;
   display: flex;
-  margin: 0 164.6px;
+  padding: 0 200px;
+}
+/* logo样式 */
+.logo {
+  /* background-color: antiquewhite; */
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  /* margin-right: 5px; */
+}
+.logo span {
+  color: #fff;
+  font-size: 22px;
+}
+/* 右侧样式 */
+.rightList {
+  width: 900px;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* background-color: bisque; */
 }
-.location {
-  float: left;
-  font-size: 10px;
-  color: #f10215;
+.bannerList {
+  width: 450px;
+  height: 60px;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
 }
-.location a i {
-  color: #f10215;
-  font-size: 16px;
+/* 列表样式 */
+.bannerList div {
+  color: #fff;
+  font-size: 14px;
 }
-.location a span {
-  margin-left: 4px;
+.bannerList div:hover {
+  background-color: #000000;
 }
-.location a span:hover {
-  color: #f10215;
+.active {
+  color: red;
 }
-ul li{
-  float: left;
-  font-size: 10px;
-  color: rgb(186, 184, 184);
+/* 信息样式 */
+.Info {
+  width: 280px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
 }
-ul li:nth-child(2) a{
-  color: #f10215 !important;
-  margin-left: 8px;
+.Info el-input {
+  border-radius: 30px;
 }
-a:hover{
-  color: #f10215;
+.Info .create {
+  width: 120px;
+  padding: 9px 10px;
+  border: #fff 1px solid;
+  border-radius: 30px;
+  height: 6px;
+  line-height: 6px;
+  font-size: 2px;
+  color: #fff;
+  margin: 0 10px;
 }
-ul li span {
- color: #999;
- margin-left: 12px;
- margin-right: 12px;
-}
-
 </style>
