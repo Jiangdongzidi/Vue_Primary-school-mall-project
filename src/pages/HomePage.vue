@@ -36,6 +36,7 @@
 <script>
 export default {
   name: 'HomePage',
+  components: { },
   data () {
     return {
     }
@@ -46,6 +47,9 @@ export default {
 }
 </script>
 <style scoped>
+.container {
+  background-color: #f5f5f5;
+}
 /* 头部导航栏 */
 .topBanner {
   background-color: #242424;
